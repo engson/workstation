@@ -1,3 +1,4 @@
+;; grove https://github.com/ivoronin/grove.hx
 (require "grove/grove.scm")
 (require "helix/keymaps.scm")
 
@@ -12,7 +13,8 @@
       [else (loop (cdr args))])))
 
 (grove-start!
-  #:visibility 'always)
+  #:visibility
+  (if (grove-workspace-launch?) 'always 'focused))
 
 (keymap (global)
   (normal
@@ -20,7 +22,7 @@
       (e ":grove-focus!")
       (E ":grove-visibility-toggle!"))))
 
-
+;; hx-tmux-navigator https://github.com/piotrkwarcinski/hx-tmux-navigator
 (require (prefix-in navigator. "hx-tmux-navigator/navigator.scm"))
 
 (keymap (global)
@@ -34,3 +36,7 @@
       (C-l ":navigator.move-right")
       (C-j ":navigator.move-down")
       (C-k ":navigator.move-up")))
+
+;; scoopline https://github.com/Ra77a3l3-jar/scopeline.hx
+(require "scopeline/scopeline.scm")
+; (scopeline-configure! #:position 'top-left)
