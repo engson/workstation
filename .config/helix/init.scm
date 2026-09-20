@@ -73,3 +73,6 @@
 ; (require "context/context.scm")
 
 ; (context-enable 'right)
+;
+;; https://github.com/thomasschafer/smooth-scroll.hx/tree/main
+(require "smooth-scroll/smooth-scroll.scm")
