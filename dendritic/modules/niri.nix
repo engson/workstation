@@ -21,8 +21,8 @@
       ];
 
       systemd.tmpfiles.rules = [
-        "L+ /home/engson/.config/niri - - - - /home/engson/Dev/.workstation/.config/niri"
-        "L+ /home/engson/.config/waybar - - - - /home/engson/Dev/.workstation/.config/waybar"
+        "L+ /home/engson/.config/niri - - - - /home/engson/Dev/workstation/.config/niri"
+        "L+ /home/engson/.config/waybar - - - - /home/engson/Dev/workstation/.config/waybar"
       ];
     };
 }

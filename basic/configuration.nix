@@ -183,10 +183,10 @@
 
   # Dotfiles
   systemd.tmpfiles.rules = [
-    "L+ /home/engson/.config/niri - - - - /home/engson/Dev/.workstation/.config/niri"
-    "L+ /home/engson/.config/waybar - - - - /home/engson/Dev/.workstation/.config/waybar"
-    "L+ /home/engson/.config/helix - - - - /home/engson/Dev/.workstation/.config/helix"
-    "L+ /home/engson/.config/tmux - - - - /home/engson/Dev/.workstation/.config/tmux"
+    "L+ /home/engson/.config/niri - - - - /home/engson/Dev/workstation/.config/niri"
+    "L+ /home/engson/.config/waybar - - - - /home/engson/Dev/workstation/.config/waybar"
+    "L+ /home/engson/.config/helix - - - - /home/engson/Dev/workstation/.config/helix"
+    "L+ /home/engson/.config/tmux - - - - /home/engson/Dev/workstation/.config/tmux"
   ];
 
   # This value determines the NixOS release from which the default

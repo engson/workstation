@@ -9,7 +9,7 @@
     };
 
     systemd.tmpfiles.rules = [
-      "L+ /home/engson/.config/tmux - - - - /home/engson/Dev/.workstation/.config/tmux"
+      "L+ /home/engson/.config/tmux - - - - /home/engson/Dev/workstation/.config/tmux"
     ];
   };
 }
