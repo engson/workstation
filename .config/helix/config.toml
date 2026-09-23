@@ -1,5 +1,5 @@
 # tip reload with :config-reload
-theme = "varua"
+theme = "onedarker"
 
 [editor]
 true-color = true

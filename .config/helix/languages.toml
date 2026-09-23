@@ -1,0 +1,10 @@
+# [[language]]
+# name = "*"
+# scope = "*"
+# file-types = [{ glob = "*" }]
+# indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "tombi", args = ["format", "-"] }

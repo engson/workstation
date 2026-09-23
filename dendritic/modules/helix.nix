@@ -5,6 +5,11 @@
       environment.systemPackages = [
         pkgsUnstable.steelix
         pkgsUnstable.steel
+
+        # Languages
+        ## Toml
+        pkgsUnstable.tombi
+        pkgsUnstable.taplo
       ];
 
       systemd.tmpfiles.rules = [

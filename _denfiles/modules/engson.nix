@@ -1,5 +1,5 @@
 let
- username = "engson";
+  username = "engson";
 in
 {
   flake.modules.nixos."${username}" = {
@@ -10,6 +10,10 @@ in
         "wheel"
         "networkmanager"
       ];
+    };
+    hjem.users.${username} = {
+      user = "${username}";
+      directory = "/home/${username}";
     };
   };
 }

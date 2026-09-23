@@ -51,10 +51,12 @@
 
       imports = with self.modules.nixos; [
         # Common configs
+        hjem
         unstable
         core
         fonts
         # User
+        hjem
         engson
         # GUI
         niri

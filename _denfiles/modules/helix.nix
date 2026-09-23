@@ -1,14 +1,17 @@
 {
-  flake.modules.nixos.helix = {
-    pkgs, ...}:
+  flake.modules.nixos.helix =
     {
-    environment.systemPackages = [
-      pkgs.steelix
-      pkgs.steel
-    ];
+      pkgsUnstable,
+      ...
+    }:
+    {
+      environment.systemPackages = [
+        pkgsUnstable.steelix
+        pkgsUnstable.steel
+      ];
 
-    systemd.tmpfiles.rules = [
-      "L+ /home/engson/.config/helix - - - - /home/engson/Dev/.workstation/.config/helix"
-    ];
-  };
+      systemd.tmpfiles.rules = [
+        "L+ /home/engson/.config/helix - - - - /home/engson/Dev/.workstation/.config/helix"
+      ];
+    };
 }
