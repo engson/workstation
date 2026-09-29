@@ -2,12 +2,10 @@
   flake.modules.nixos.tmux = {pkgs, ...}:{
     programs.tmux = {
         enable = true;
-        historyLimit = 20000;
-        terminal = "tmux-256color";
         plugins = [ pkgs.tmuxPlugins.resurrect ];
         # TODO: Fix plugins;
     };
-    imports = [ self.modules.hjem.tmux ];
+    #imports = [ self.modules.hjem.tmux ];
 
   };
   flake.modules.hjem.tmux ={ pkgs,... }:{
