@@ -1,3 +1,4 @@
+{self, ...}:
 let
   username = "engson";
 in
@@ -14,6 +15,8 @@ in
     hjem.users.${username} = {
       user = "${username}";
       directory = "/home/${username}";
+
+      imports = [ self.modules.hjem.tmux ];
     };
   };
 }
