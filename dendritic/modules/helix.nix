@@ -9,7 +9,6 @@
         # Languages
         ## Toml
         pkgsUnstable.tombi
-        pkgsUnstable.taplo
       ];
 
       systemd.tmpfiles.rules = [

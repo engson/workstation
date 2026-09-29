@@ -51,7 +51,6 @@
 
       imports = with self.modules.nixos; [
         # Common configs
-        hjem
         unstable
         core
         fonts

@@ -8,6 +8,10 @@
       environment.systemPackages = [
         pkgsUnstable.steelix
         pkgsUnstable.steel
+
+        # Languages
+        ## Toml
+        pkgsUnstable.tombi
       ];
 
       systemd.tmpfiles.rules = [
