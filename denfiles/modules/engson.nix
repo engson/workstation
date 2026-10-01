@@ -1,4 +1,4 @@
-{self, ...}:
+{ self, ... }:
 let
   username = "engson";
 in
@@ -12,11 +12,14 @@ in
         "networkmanager"
       ];
     };
-    hjem.users.${username} = {
-      user = "${username}";
-      directory = "/home/${username}";
+    hjem = {
+      clobberByDefault = true;
+      users.${username} = {
+        user = "${username}";
+        directory = "/home/${username}";
 
-      imports = [ self.modules.hjem.tmux ];
+        imports = [ self.modules.hjem.tmux ];
+      };
     };
   };
 }
