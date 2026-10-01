@@ -7,6 +7,7 @@ color-modes = true
 popup-border = "all"
 end-of-line-diagnostics = "hint"
 trim-trailing-whitespace = true
+cursorline = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -19,6 +20,10 @@ render = true
 
 [editor.lsp]
 auto-signature-help = false
+display-inlay-hints = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
 
 [editor.whitespace.render]
 space = "none"
@@ -45,3 +50,6 @@ newline = "⏎"
 "C-u" = ":half-page-up-smooth"
 "pageup" = ":page-up-smooth"
 "pagedown" = ":page-down-smooth"
+
+[keys.insert]
+j.k = "normal_mode"

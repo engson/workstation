@@ -2,7 +2,7 @@
   flake.modules.nixos.tmux = {pkgs, ...}:{
     programs.tmux = {
         enable = true;
-        plugins = [ pkgs.tmuxPlugins.resurrect ];
+        plugins = [ pkgs.tmuxPlugins.resurrect pkgs.tmuxPlugins.continuum ];
     };
 
   };
