@@ -1,3 +1,4 @@
+{ ... }:
 {
   flake.modules.nixos.niri =
     {
@@ -7,10 +8,7 @@
     }:
     {
       programs.niri.enable = true;
-      environment.systemPackages = [
-
-        # Niri components
-        pkgsUnstable.waybar
+      environment.systemPackages = [ pkgsUnstable.waybar
         pkgs.alacritty
         pkgs.fuzzel
         pkgs.swaylock
@@ -19,10 +17,9 @@
         pkgs.wireplumber
         pkgs.swaybg
       ];
-
-      systemd.tmpfiles.rules = [
-        "L+ /home/engson/.config/niri - - - - /home/engson/Dev/workstation/.config/niri"
-        "L+ /home/engson/.config/waybar - - - - /home/engson/Dev/workstation/.config/waybar"
-      ];
     };
+  flake.modules.hjem.niri = {
+    files.".config/niri".source = ./../.config/niri;
+    files.".config/waybar".source = ./../.config/waybar;
+  };
 }

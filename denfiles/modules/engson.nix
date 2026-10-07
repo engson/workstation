@@ -18,7 +18,11 @@ in
         user = "${username}";
         directory = "/home/${username}";
 
-        imports = [ self.modules.hjem.tmux ];
+        imports = with self.modules.hjem; [
+          unstable
+          tmux
+         # niri
+        ];
       };
     };
   };
