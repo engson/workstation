@@ -15,20 +15,19 @@ endif::[]
 :toc-placement!:
 
 My complete setup of workstation on a linux system. +
-It consist of nixos + home-manager OR home-manager only on non-nixos distros.
-
+It consist of nixos.
 toc::[]
 
 == Explanation of differen setups
-Multisetup is only for my own learning to see the difference. Basis setup will only work for nixos hosts (for now).
+Multisetup is only for my own learning to see the difference. Basis setup will only work for nixos hosts.
 
 *basic* basic setup with only flake wrapping around hardware + configuration. Nothing extra.
 
-*dendritic* _basic_ setup with dendritic pattern used.
+*denfiles* _basic_ setup with dendritic pattern with flake-files dendritic helpers.
 
 == Prerequisites
 - git (Will use home-manager git after install)
-- Repo cloned into /Dev/.workstation folder TODO: Allow any location.
+- Repo cloned into any location (optional)
 
 == Commands
 
@@ -101,7 +100,6 @@ experimental-features = nix-command flakes
 [IMPORTANT]
 ====
 nixos-rebuild `--flake .` defaults to look for nixConfigurations named `hostname`  +
-home-manager `--flake .` defaults to look for homeConfigurations named `$(USERNAME)@hostname`
 
 Specify name explicitly when needed e.g. `--flake .#desktop` to use other than default, usefull if this is first setup and hostname is reconfigured later.
 ====
@@ -118,14 +116,6 @@ nix develop
 ----
 
 
-.Other linux distro
-[source, bash]
-----
-# Build system configuration
-home-manager build --flake .engson@work
-
-home-manager switch --flake .engson@work
-----
 
 == Update configs
 [source, bash]
@@ -150,7 +140,6 @@ nix shell nixpkgs#age -c age-keygen -o ~/.config/sops/age/keys.txt
 nix shell nixpkgs#age -c age-keygen -y ~/.config/sops/age/keys.txt
 ----
 
-TODO: Fix non-default home-manager location
 
 == Flakes
 [source,bash]
