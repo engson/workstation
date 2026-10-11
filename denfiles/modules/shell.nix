@@ -16,6 +16,8 @@
       pkgsUnstable.oh-my-posh
       # dev tools
       pkgsUnstable.devenv
+      # better grep
+      pkgs.ripgrep
       # nixos diff tool
       pkgs.nvd
       # Languag servers
