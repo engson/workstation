@@ -8,7 +8,6 @@
         # Add devenv hook
         eval "$(devenv hook bash)"
         # Add forge home
-        #
         export STEEL_HOME=$HOME/.local/share/steel
       '';
     };
