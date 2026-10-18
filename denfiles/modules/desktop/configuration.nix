@@ -64,6 +64,7 @@
         helix
         tmux
         git
+        discord
       ];
     };
 

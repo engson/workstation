@@ -14,6 +14,8 @@
         pkgsUnstable.tombi
       ];
 
-      systemd.tmpfiles.rules = [
-        "L+ /home/engson/.config/helix - - - - /home/engson/Dev/workstation/.config/helix" ]; };
+    };
+  flake.modules.hjem.helix = {
+    files.".config/helix".source = ./../../.config/helix;
+  };
 }

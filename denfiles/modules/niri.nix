@@ -19,7 +19,7 @@
       ];
     };
   flake.modules.hjem.niri = {
-    files.".config/niri".source = ./../.config/niri;
-    files.".config/waybar".source = ./../.config/waybar;
+    files.".config/niri".source = ./../../.config/niri;
+    files.".config/waybar".source = ./../../.config/waybar;
   };
 }

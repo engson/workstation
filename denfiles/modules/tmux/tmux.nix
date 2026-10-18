@@ -1,4 +1,3 @@
-{ ... }:
 {
   flake.modules.nixos.tmux =
     { pkgs, ... }:
@@ -11,9 +10,9 @@
         ];
       };
       environment.systemPackages = [ pkgs.tmux ];
-    };
-  flake.modules.hjem.tmux = {
 
-    files.".config/tmux.conf".source = ./tmux.conf;
-  };
+      hjem.users.engson = {
+        files.".config/tmux.conf".source = ./tmux.conf;
+      };
+    };
 }

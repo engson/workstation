@@ -20,8 +20,8 @@ in
 
         imports = with self.modules.hjem; [
           unstable
-          tmux
-         # niri
+          niri
+          helix
         ];
       };
     };
