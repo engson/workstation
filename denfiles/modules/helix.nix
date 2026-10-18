@@ -13,6 +13,9 @@
         ## Toml
         pkgsUnstable.tombi
       ];
+      environment.variables = {
+        EDITOR = "hx";
+      };
 
     };
   flake.modules.hjem.helix = {
