@@ -2,6 +2,7 @@
   flake.modules.nixos.helix =
     {
       pkgsUnstable,
+      lib,
       ...
     }:
     {
@@ -16,6 +17,9 @@
       environment.variables = {
         EDITOR = "hx";
       };
+      programs.bash.interactiveShellInit = lib.mkAfter ''
+        export EDITOR="hx"
+      '';
 
     };
   flake.modules.hjem.helix = {

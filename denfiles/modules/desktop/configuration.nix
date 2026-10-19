@@ -60,8 +60,8 @@
         # GUI
         niri
         # Tools
-        shell
         helix
+        shell
         tmux
         git
         discord
